@@ -1,0 +1,153 @@
+/* Hotdog art by https://dribbble.com/shots/3275208-Pure-CSS-Hotdog */
+.hotdog-flex-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.hotdog-flex-container .hotdog-unit {
+  margin: 0 60px;
+  text-align: center;
+}
+.hotdog-flex-container h3 {
+  margin: 2em 0;
+  font-family: 'Fjalla One', sans-serif;
+  font-style: italic;
+  color: #650818;
+}
+.hotdog-hotdog-unit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hotdog-hotdog-unit.hotdog-animated {
+  -webkit-animation: floating 2s ease infinite;
+          animation: floating 2s ease infinite;
+}
+.hotdog-hotdog {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  width: 40px;
+  height: 200px;
+  border-radius: 20px;
+  background-color: #f35548;
+  border-left: solid 8px #f13a2a;
+}
+.hotdog-bread {
+  box-sizing: border-box;
+  position: relative;
+  width: 36px;
+  height: 180px;
+  background-color: #ef9b26;
+}
+.hotdog-bread.hotdog-left {
+  margin-right: -6px;
+  border-radius: 50px 0 0 50px;
+  border-left: 8px solid #e88e11;
+}
+.hotdog-bread.hotdog-right {
+  margin-left: -6px;
+  border-radius: 0 50px 50px 0;
+  border-right: 8px solid #e88e11;
+}
+.hotdog-shadow {
+  width: 100px;
+  height: 15px;
+  border-radius: 40%;
+  margin-top: 30px;
+  margin-left: 25px;
+  background-color: rgba(0,0,0,0.05);
+  -webkit-animation: floating-shadow 2s ease infinite;
+          animation: floating-shadow 2s ease infinite;
+}
+.hotdog-mustard {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  left: -8px;
+}
+.hotdog-mustard:before,
+.hotdog-mustard:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  bottom: 0%;
+  left: 10%;
+  background-repeat: repeat-y;
+}
+.hotdog-mustard:before {
+  left: 48%;
+  background-size: 16px 44px;
+  background-image: radial-gradient(circle at 0px 16px, transparent 6px, #f2b101 6px, #f2b101 11px, #febe10 11px, #febe10 16px, transparent 16px);
+}
+.hotdog-mustard:after {
+  left: 8px;
+  right: 48%;
+  background-size: 16px 44px;
+  background-image: radial-gradient(circle at 16px 16px, transparent 6px, #febe10 6px, #febe10 11px, #f2b101 11px, #f2b101 16px, transparent 16px);
+  background-position: 0 22px;
+}
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: rotate(-30deg) translateY(2px);
+            transform: rotate(-30deg) translateY(2px);
+  }
+  50% {
+    -webkit-transform: rotate(-30deg) translateY(15px);
+            transform: rotate(-30deg) translateY(15px);
+  }
+  100% {
+    -webkit-transform: rotate(-30deg) translateY(2px);
+            transform: rotate(-30deg) translateY(2px);
+  }
+}
+@keyframes floating {
+  0% {
+    -webkit-transform: rotate(-30deg) translateY(2px);
+            transform: rotate(-30deg) translateY(2px);
+  }
+  50% {
+    -webkit-transform: rotate(-30deg) translateY(15px);
+            transform: rotate(-30deg) translateY(15px);
+  }
+  100% {
+    -webkit-transform: rotate(-30deg) translateY(2px);
+            transform: rotate(-30deg) translateY(2px);
+  }
+}
+@-webkit-keyframes floating-shadow {
+  0% {
+    -webkit-transform: scaleX(0.75);
+            transform: scaleX(0.75);
+  }
+  50% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  100% {
+    -webkit-transform: scaleX(0.75);
+            transform: scaleX(0.75);
+  }
+}
+@keyframes floating-shadow {
+  0% {
+    -webkit-transform: scaleX(0.75);
+            transform: scaleX(0.75);
+  }
+  50% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  100% {
+    -webkit-transform: scaleX(0.75);
+            transform: scaleX(0.75);
+  }
+}
